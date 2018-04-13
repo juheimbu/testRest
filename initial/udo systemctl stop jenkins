@@ -1,0 +1,15 @@
+[0;1;32m●[0m jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; generated; vendor preset: disabled)
+   Active: [0;1;32mactive (running)[0m since Thu 2018-04-12 16:47:54 CDT; 3h 25min ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 4357 ExecStop=/etc/rc.d/init.d/jenkins stop (code=exited, status=0/SUCCESS)
+  Process: 4378 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+    Tasks: 36 (limit: 4915)
+   CGroup: /system.slice/jenkins.service
+           └─4403 /etc/alternatives/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/lib/jenkins/jenkins.war --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --daemon --httpPort=8080 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20
+
+Apr 12 16:47:53 musicmachine systemd[1]: Starting LSB: Jenkins Automation Server...
+Apr 12 16:47:53 musicmachine runuser[4384]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+Apr 12 16:47:54 musicmachine runuser[4384]: pam_unix(runuser:session): session closed for user jenkins
+Apr 12 16:47:54 musicmachine jenkins[4378]: Starting Jenkins [  OK  ]
+Apr 12 16:47:54 musicmachine systemd[1]: Started LSB: Jenkins Automation Server.
